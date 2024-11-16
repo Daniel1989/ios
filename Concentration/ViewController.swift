@@ -54,6 +54,7 @@ class ViewController: UIViewController {
             if card.isFaceUp {
                 button.setTitle(emoji(for: card), for: UIControl.State.normal)
                 button.backgroundColor = UIColor.white
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
             } else {
                 button.setTitle("", for: UIControl.State.normal)
                 button.backgroundColor = card.isMatched ? UIColor.clear : UIColor.orange
