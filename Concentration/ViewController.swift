@@ -21,16 +21,18 @@ class ViewController: UIViewController {
         }
     }
     
-    var emojiChoices = ["👻","🎃", "😶‍🌫️", "🤬", "🫥", "🫶"]
+//    var emojiChoices = ["👻","🎃", "😶‍🌫️", "🤬", "🫥", "🫶"]
+    private var emojiChoices = "👻🎃😶‍🌫️🤬🫥🫶"
+
     
-    var emoji =  [Int: String]()
+    private var emoji =  [Card: String]()
     
-    func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
-            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+    private func emoji(for card: Card) -> String {
+        if emoji[card] == nil, emojiChoices.count > 0 {
+            let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4random)
+            emoji[card] = String(emojiChoices.remove(at: randomStringIndex))
         }
-        return  emoji[card.identifier] ?? "?"
+        return  emoji[card] ?? "?"
     }
     
     @IBOutlet weak var flipCountLabel: UILabel!
@@ -71,3 +73,14 @@ class ViewController: UIViewController {
 
 }
 
+extension Int {
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return -1
+        }
+    }
+}
