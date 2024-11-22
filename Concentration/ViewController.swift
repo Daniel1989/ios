@@ -12,18 +12,27 @@ class ViewController: UIViewController {
     lazy var game: Concentration = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
     var numberOfPairsOfCards: Int {
-            return (cardButtons.count + 1) / 2
+        return (cardButtons.count + 1) / 2
     }
     
     var flipCount = 0 {
         didSet {
-            flipCountLabel.text = "Flips: \(flipCount)"
+            updateFilpCountLabel()
         }
     }
     
-//    var emojiChoices = ["👻","🎃", "😶‍🌫️", "🤬", "🫥", "🫶"]
+    private func updateFilpCountLabel() {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .strokeWidth: 5.0,
+            .strokeColor: UIColor.orange
+        ]
+        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes )
+        flipCountLabel.attributedText = attributedString
+    }
+    
+    //    var emojiChoices = ["👻","🎃", "😶‍🌫️", "🤬", "🫥", "🫶"]
     private var emojiChoices = "👻🎃😶‍🌫️🤬🫥🫶"
-
+    
     
     private var emoji =  [Card: String]()
     
@@ -35,7 +44,11 @@ class ViewController: UIViewController {
         return  emoji[card] ?? "?"
     }
     
-    @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet weak var flipCountLabel: UILabel! {
+        didSet {
+            updateFilpCountLabel()
+        }
+    }
     @IBOutlet var cardButtons: [UIButton]!
     
     @IBAction func touchCard(_ sender: UIButton) {
@@ -63,14 +76,14 @@ class ViewController: UIViewController {
             }
         }
     }
-        
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
 }
 
 extension Int {
