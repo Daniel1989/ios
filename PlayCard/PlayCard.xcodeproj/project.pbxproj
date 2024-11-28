@@ -15,6 +15,7 @@
 		7726493C2CF72E72007C6BBF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7726493B2CF72E72007C6BBF /* Base */; };
 		772649452CF72EE8007C6BBF /* PlayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772649442CF72EE8007C6BBF /* PlayCard.swift */; };
 		772649472CF73147007C6BBF /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772649462CF73147007C6BBF /* Deck.swift */; };
+		777A35532CF8322A0098CB5F /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777A35522CF8322A0098CB5F /* PlayingCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7726493D2CF72E72007C6BBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772649442CF72EE8007C6BBF /* PlayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCard.swift; sourceTree = "<group>"; };
 		772649462CF73147007C6BBF /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		777A35522CF8322A0098CB5F /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				7726493D2CF72E72007C6BBF /* Info.plist */,
 				772649442CF72EE8007C6BBF /* PlayCard.swift */,
 				772649462CF73147007C6BBF /* Deck.swift */,
+				777A35522CF8322A0098CB5F /* PlayingCardView.swift */,
 			);
 			path = PlayCard;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				772649342CF72E71007C6BBF /* ViewController.swift in Sources */,
+				777A35532CF8322A0098CB5F /* PlayingCardView.swift in Sources */,
 				772649452CF72EE8007C6BBF /* PlayCard.swift in Sources */,
 				772649472CF73147007C6BBF /* Deck.swift in Sources */,
 				772649302CF72E71007C6BBF /* AppDelegate.swift in Sources */,
