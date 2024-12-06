@@ -7,17 +7,36 @@
 
 import UIKit
 
+//@IBDesignable
 class PlayingCardView: UIView {
-    var rank: Int = 5 {
+    
+    var faceCardScale: CGFloat =  SizeRatio.faceCardImageSizeToBoundsSize {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    @objc func adjustFaceCardScale(byHandlingGestureRec recongizer: UIPinchGestureRecognizer) {
+        switch recongizer.state {
+        case .changed, .ended:
+            faceCardScale *= recongizer.scale
+            recongizer.scale = 1.0
+        default: break
+        }
+    }
+    @IBInspectable
+    var rank: Int = 11 {
         didSet {
             setNeedsDisplay(); setNeedsLayout()
         }
     }
+    @IBInspectable
     var suit: String = "❤️" {
         didSet {
             setNeedsDisplay(); setNeedsLayout()
         }
     }
+    @IBInspectable
     var isFaceUp: Bool = true {
         didSet {
             setNeedsDisplay(); setNeedsLayout()
@@ -80,6 +99,18 @@ class PlayingCardView: UIView {
         roundedRect.addClip()
         UIColor.white.setFill()
         roundedRect.fill()
+        
+        if isFaceUp {
+            if let faceCardImage = UIImage(named: "screenshot-20241203-183651.png", in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
+            } else {
+                // draw pips
+            }
+        } else {
+            // draw back
+        }
+        
+        
     }
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,31 +12,41 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayCard" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="redraw" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dp1-oA-C4q" customClass="PlayingCardView" customModule="PlayCard" customModuleProvider="target">
-                                <rect key="frame" x="98" y="222" width="196" height="409"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dp1-oA-C4q" customClass="PlayingCardView" customModule="PlayCard" customModuleProvider="target">
+                                <rect key="frame" x="37" y="151" width="340" height="594"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dp1-oA-C4q" secondAttribute="height" multiplier="5:8" id="P5A-c5-7JN"/>
+                                    <constraint firstAttribute="width" priority="750" constant="800" id="Wd3-jp-3sQ"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LHS-Zh-zUB" appends="YES" id="Kdr-UQ-eN9"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="dp1-oA-C4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ahp-rU-H0o"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dp1-oA-C4q" secondAttribute="trailing" constant="16" id="J10-Bj-RB1"/>
-                            <constraint firstItem="dp1-oA-C4q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nvd-TG-dxQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dp1-oA-C4q" secondAttribute="bottom" constant="16" id="YM0-BX-suH"/>
-                            <constraint firstItem="dp1-oA-C4q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="k01-UD-ibz"/>
-                            <constraint firstItem="dp1-oA-C4q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mUh-mi-OTf"/>
+                            <constraint firstItem="dp1-oA-C4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="5ft-ul-xUV"/>
+                            <constraint firstItem="dp1-oA-C4q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="Pde-jF-sT0"/>
+                            <constraint firstItem="dp1-oA-C4q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQe-Cq-Mae"/>
+                            <constraint firstItem="dp1-oA-C4q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rJL-Wi-VdP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="dp1-oA-C4q" id="eVH-Zn-gU6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LHS-Zh-zUB">
+                    <connections>
+                        <action selector="fileCard:" destination="BYZ-38-t0r" id="NyF-TP-eu3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="119.84732824427481" y="3.5211267605633805"/>
         </scene>
