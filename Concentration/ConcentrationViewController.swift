@@ -7,7 +7,7 @@
 
 import UIKit
 
-class COncentrationViewController: UIViewController {
+class ConcentrationViewController: UIViewController {
     
     lazy var game: Concentration = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
@@ -24,10 +24,19 @@ class COncentrationViewController: UIViewController {
     private func updateFilpCountLabel() {
         let attributes: [NSAttributedString.Key: Any] = [
             .strokeWidth: 5.0,
-            .strokeColor: UIColor.orange
+            .strokeColor: UIColor.black
         ]
         let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes )
         flipCountLabel.attributedText = attributedString
+    }
+    
+    var theme: String? {
+        didSet {
+            print(theme)
+            emojiChoices = theme ?? ""
+            emoji = [:]
+            updateViewFromModel()
+        }
     }
     
     //    var emojiChoices = ["👻","🎃", "😶‍🌫️", "🤬", "🫥", "🫶"]
@@ -63,18 +72,21 @@ class COncentrationViewController: UIViewController {
     }
     
     func updateViewFromModel() {
-        for index in cardButtons.indices {
-            let button = cardButtons[index]
-            let card = game.cards[index]
-            if card.isFaceUp {
-                button.setTitle(emoji(for: card), for: UIControl.State.normal)
-                button.backgroundColor = UIColor.white
-                button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
-            } else {
-                button.setTitle("", for: UIControl.State.normal)
-                button.backgroundColor = card.isMatched ? UIColor.clear : UIColor.orange
+        if cardButtons != nil {
+            for index in cardButtons.indices {
+                let button = cardButtons[index]
+                let card = game.cards[index]
+                if card.isFaceUp {
+                    button.setTitle(emoji(for: card), for: UIControl.State.normal)
+                    button.backgroundColor = UIColor.gray
+                    button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+                } else {
+                    button.setTitle("", for: UIControl.State.normal)
+                    button.backgroundColor = card.isMatched ? UIColor.clear : UIColor.blue
+                }
             }
         }
+        
     }
     
     
