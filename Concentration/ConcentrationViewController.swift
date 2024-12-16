@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class COncentrationViewController: UIViewController {
     
     lazy var game: Concentration = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
