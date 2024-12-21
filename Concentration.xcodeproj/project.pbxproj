@@ -16,6 +16,7 @@
 		65FD58C22C95E33600F773EF /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD58C12C95E33600F773EF /* Concentration.swift */; };
 		65FD58C42C95E3ED00F773EF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD58C32C95E3ED00F773EF /* Card.swift */; };
 		77129ABB2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77129ABA2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift */; };
+		7713AD092D13E0AF00E51F2B /* CardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713AD082D13E0AF00E51F2B /* CardBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		65FD58C12C95E33600F773EF /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		65FD58C32C95E3ED00F773EF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		77129ABA2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooseViewController.swift; sourceTree = "<group>"; };
+		7713AD082D13E0AF00E51F2B /* CardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				659AFC972C933A77009F18E3 /* AppDelegate.swift */,
 				659AFC992C933A77009F18E3 /* SceneDelegate.swift */,
 				659AFC9B2C933A77009F18E3 /* ConcentrationViewController.swift */,
+				7713AD082D13E0AF00E51F2B /* CardBehavior.swift */,
 				65FD58C12C95E33600F773EF /* Concentration.swift */,
 				65FD58C32C95E3ED00F773EF /* Card.swift */,
 				659AFC9D2C933A77009F18E3 /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				77129ABB2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift in Sources */,
 				659AFC982C933A77009F18E3 /* AppDelegate.swift in Sources */,
 				659AFC9A2C933A77009F18E3 /* SceneDelegate.swift in Sources */,
+				7713AD092D13E0AF00E51F2B /* CardBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
