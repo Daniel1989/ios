@@ -17,6 +17,7 @@
 		65FD58C42C95E3ED00F773EF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD58C32C95E3ED00F773EF /* Card.swift */; };
 		77129ABB2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77129ABA2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift */; };
 		7713AD092D13E0AF00E51F2B /* CardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7713AD082D13E0AF00E51F2B /* CardBehavior.swift */; };
+		77D341C52D1C0080002BBCDD /* VCLLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D341C42D1C0080002BBCDD /* VCLLoggingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		65FD58C32C95E3ED00F773EF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		77129ABA2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooseViewController.swift; sourceTree = "<group>"; };
 		7713AD082D13E0AF00E51F2B /* CardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBehavior.swift; sourceTree = "<group>"; };
+		77D341C42D1C0080002BBCDD /* VCLLoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLLoggingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				659AFCA02C933A79009F18E3 /* Assets.xcassets */,
 				659AFCA22C933A79009F18E3 /* LaunchScreen.storyboard */,
 				659AFCA52C933A79009F18E3 /* Info.plist */,
+				77D341C42D1C0080002BBCDD /* VCLLoggingViewController.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				65FD58C22C95E33600F773EF /* Concentration.swift in Sources */,
 				65FD58C42C95E3ED00F773EF /* Card.swift in Sources */,
 				77129ABB2D0808B100D7276F /* ConcentrationThemeChooseViewController.swift in Sources */,
+				77D341C52D1C0080002BBCDD /* VCLLoggingViewController.swift in Sources */,
 				659AFC982C933A77009F18E3 /* AppDelegate.swift in Sources */,
 				659AFC9A2C933A77009F18E3 /* SceneDelegate.swift in Sources */,
 				7713AD092D13E0AF00E51F2B /* CardBehavior.swift in Sources */,

@@ -11,7 +11,10 @@ class CustomTapGesture: UITapGestureRecognizer {
     var customParameter: Int?
 }
 
-class ConcentrationViewController: UIViewController {
+class ConcentrationViewController: VCLLoggingViewController {
+    override var vclLoggingName: String {
+        return "main"
+    }
     
     lazy var game: Concentration = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
