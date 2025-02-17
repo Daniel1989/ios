@@ -1,5 +1,7 @@
 import UIKit
 
+// Make sure these files are in your project's target
+
 class CrosswordView: UIView {
     private let gridView = CrosswordGridView()
     private let cluesView = CluesView()
@@ -14,9 +16,9 @@ class CrosswordView: UIView {
     }
     
     private func setupUI() {
-        [gridView, cluesView].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
-            addSubview($0)
+        [gridView, cluesView].forEach { view in
+            view.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(view)
         }
         
         NSLayoutConstraint.activate([

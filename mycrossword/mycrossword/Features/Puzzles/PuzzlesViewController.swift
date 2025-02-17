@@ -76,4 +76,37 @@ class PuzzlesViewController: UIViewController {
             bottomToolbar.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
+    
+    private func setupCollectionView() {
+        puzzleCollectionView.delegate = self
+        puzzleCollectionView.dataSource = self
+        puzzleCollectionView.register(PuzzleCell.self, forCellWithReuseIdentifier: "PuzzleCell")
+        puzzleCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        puzzleCollectionView.showsHorizontalScrollIndicator = false
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension PuzzlesViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2 // For now, just showing 2 puzzles
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PuzzleCell", for: indexPath) as! PuzzleCell
+        // Configure cell based on indexPath
+        if indexPath.item == 0 {
+            cell.configure(title: "Morning Coffee", category: "Food & Drinks", difficulty: "Easy", duration: "15 min")
+        } else {
+            cell.configure(title: "World Capitals", category: "Geography", difficulty: "Medium", duration: "15 min")
+        }
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension PuzzlesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width * 0.7, height: collectionView.bounds.height)
+    }
 } 

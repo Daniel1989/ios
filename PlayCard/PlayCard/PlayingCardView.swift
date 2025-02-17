@@ -19,6 +19,7 @@ class PlayingCardView: UIView {
     @objc func adjustFaceCardScale(byHandlingGestureRec recongizer: UIPinchGestureRecognizer) {
         switch recongizer.state {
         case .changed, .ended:
+            print("recongizer.scale: \(recongizer.scale)")
             faceCardScale *= recongizer.scale
             recongizer.scale = 1.0
         default: break

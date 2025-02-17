@@ -37,6 +37,7 @@ class ConcentrationViewController: VCLLoggingViewController {
             .strokeWidth: 5.0,
             .strokeColor: UIColor.black
         ]
+        
         let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes )
         flipCountLabel.attributedText = attributedString
     }
@@ -237,5 +238,11 @@ extension Int {
         } else {
             return -1
         }
+    }
+}
+
+extension UIViewController {
+    @objc func injected() {
+        viewDidLoad()
     }
 }
