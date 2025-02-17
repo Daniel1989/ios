@@ -11,6 +11,6 @@ class CluesView: UIView {
     }
     
     private func setupUI() {
-        backgroundColor = .systemBackground
+        backgroundColor = .systemGray6  // Different gray to distinguish from grid
     }
 } 

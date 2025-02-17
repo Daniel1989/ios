@@ -11,6 +11,6 @@ class CrosswordGridView: UIView {
     }
     
     private func setupUI() {
-        backgroundColor = .systemBackground
+        backgroundColor = .systemGray5  // Light gray background to make it visible
     }
 } 
